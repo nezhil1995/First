@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Log in to Docker Hub
-        run: echo "${{ secrets.Docker_password }}" | docker login -u "${{ secrets.Docker_username }}" --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USER_NAME }}" --password-stdin
 
       - name: Build Docker image
         run: docker build -t ezhil17/nodejs.app .
